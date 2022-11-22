@@ -5,7 +5,9 @@
     "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
-    "lib": ["es2018", "ESNext.AsyncIterable"]
+    "lib": ["es2018", "ESNext.AsyncIterable"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules"]
 }
