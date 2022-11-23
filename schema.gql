@@ -14,12 +14,14 @@ type Query {
 }
 
 type User {
+  age: Float!
   email: String!
   id: Float!
   name: String!
 }
 
 input UserInput {
+  age: Int = 18
   email: String!
   name: String!
 }

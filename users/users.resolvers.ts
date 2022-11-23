@@ -4,9 +4,10 @@ import { UserInput, User } from './users.schema';
 @Resolver(() => User)
 export class UsersResolver {
   private users: User[] = [
-    { id: 1, name: 'John Doe', email: 'johndoe@gmail.com' },
-    { id: 2, name: 'Jane Doe', email: 'janedoe@gmail.com' },
-    { id: 3, name: 'Mike Doe', email: 'mikedoe@gmail.com' },
+    { id: 1, name: 'John Doe', email: 'johndoe@gmail.com', age: 25 },
+    { id: 2, name: 'Jane Doe', email: 'janedoe@gmail.com', age: 30 },
+    { id: 3, name: 'Mike Doe', email: 'mikedoe@gmail.com', age: 32 },
+    { id: 4, name: 'Bob Doe', email: 'bobdoe@gmail.com', age: 16 },
   ];
 
   @Query(() => [User])

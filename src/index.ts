@@ -8,8 +8,8 @@ import { UsersResolver } from '../users/users.resolvers';
 async function main() {
   const schema = await buildSchema({
     resolvers: [UsersResolver],
-    emitSchemaFile: true,
-  });
+    emitSchemaFile: true, // если true, то TypeGraphQL сгенерирует файл
+  }); // schema.gql во время сборки.
 
   const app = express();
 
@@ -17,8 +17,8 @@ async function main() {
     '/graphql',
     graphqlHTTP({
       schema: schema,
-      graphiql: true,
-    })
+      graphiql: true, // Если true, то по указанному маршруту '/graphql'
+    }) //  отображает GraphiQL
   );
 
   app.listen(8000);
